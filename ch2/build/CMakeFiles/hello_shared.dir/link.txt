@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -dynamiclib -Wl,-headerpad_max_install_names  -o libhello_shared.dylib -install_name /Users/liuxing/files/cpp/slambook2/ch2/build/libhello_shared.dylib CMakeFiles/hello_shared.dir/libHelloSLAM.cpp.o 
