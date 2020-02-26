@@ -1,2 +1,2 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libhello.a  CMakeFiles/hello.dir/libHelloSLAM.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libhello.a
+/usr/bin/ar qc libhello.a  CMakeFiles/hello.dir/libHelloSLAM.cpp.o
+/usr/bin/ranlib libhello.a
