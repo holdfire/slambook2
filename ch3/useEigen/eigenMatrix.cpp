@@ -6,11 +6,11 @@ using namespace std;
 // Eigen核心部分
 #include<Eigen/Core>
 // 稠密矩阵的代数运算：求逆、特征值等
-#include<Eigin/Dense>
+#include<Eigen/Dense>
 
 using namespace Eigen;
 
-#define MATRIX_SIZE 50;
+#define MATRIX_SIZE 50
 
 /************************
  * 本程序演示了Eigen基本类型的使用
@@ -57,11 +57,12 @@ int main(int argc, char** argv){
     // Matrix<double, 2, 1> result_wrong_type = matrxi_23 * v_3d;
     // 应该显式转换, double和double类型做点乘
     Matrix<double, 2, 1> result = matrix_23.cast<double>() * v_3d;
-    cout<<“[1,2,3;4,5,6] * [3;2;1] = ”<<result.transpose()<<endl;
+   cout<<"[1,2,3;4,5,6] * [3;2;1] = "<<result.transpose()<<endl;
+
 
     // 或者是floa和float相乘
     Matrix<float, 2, 1> result2 = matrix_23 * vd_3d;
-    cout<<“[1,2,3;4,5,6] * [3;2;1] = ”<<result2.transpose()<<endl;
+    cout<<"[1,2,3;4,5,6] * [3;2;1] = "<<result2.transpose()<<endl;
 
     // 同样你不能搞错矩阵的维度
     // 试着取消下面的注释，看看Eigen会报什么错误
@@ -90,25 +91,25 @@ int main(int argc, char** argv){
     // 直接求逆自然是最直接的，但是求逆运算量大
 
     Matrix<double, MATRIX_SIZE, MATRIX_SIZE> matrix_NN = MatrixXd::Random(MATRIX_SIZE, MATRIX_SIZE);
-    matrix_NN = Matrix_NN * Matrix_NN.transpose();            // 保证矩阵半正定
+    matrix_NN = matrix_NN * matrix_NN.transpose();            // 保证矩阵半正定
     Matrix<double, MATRIX_SIZE, 1> v_Nd = MatrixXd::Random(MATRIX_SIZE, 1);
 
     clock_t time_stt = clock();     //开始计时
     // 方法一：直接求逆
     Matrix<double, MATRIX_SIZE, 1> x = matrix_NN.inverse() * v_Nd;
-    cout<< "time of normal inverse is"<< 1000 * (clock() - time_stt) / (double) CLOCKS_PER_SE<<"ms"<<endl;
+    cout<< "time of normal inverse is"<< 1000 * (clock() - time_stt) / (double) CLOCKS_PER_SEC<<"ms"<<endl;
     cout<<"x = "<<x.transpose()<<endl;
 
     // 方法二：通常用矩阵分解来求，这样速度会快很多，例如QR分解
     time_stt = clock();
-    x = matrix_NN.colPivHouseholderQe().solve(v_Nd);
-    cout<< "time of QR decomposition is"<< 1000 * (clock() - time_stt) / (double) CLOCKS_PER_SE<<"ms"<<endl;
+    x = matrix_NN.colPivHouseholderQr().solve(v_Nd);
+    cout<< "time of QR decomposition is"<< 1000 * (clock() - time_stt) / (double) CLOCKS_PER_SEC<<"ms"<<endl;
     cout<<"x = "<<x.transpose()<<endl;
 
     // 方法三：对于正定矩阵，还可以使用cholesky分解来求解方程
     time_stt = clock();
     x = matrix_NN.ldlt().solve(v_Nd);
-    cout<< "time of ldlt decomposition is"<< 1000 * (clock() - time_stt) / (double) CLOCKS_PER_SE<<"ms"<<endl;
+    cout<< "time of ldlt decomposition is"<< 1000 * (clock() - time_stt) / (double) CLOCKS_PER_SEC<<"ms"<<endl;
     cout<<"x = "<<x.transpose()<<endl;
 
     return 0;
