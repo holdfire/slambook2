@@ -1,0 +1,3 @@
+/Users/liuxing/files/cpp/slambook2/ch3/visualizeGeometry/build/CMakeFiles/rebuild_cache.dir
+/Users/liuxing/files/cpp/slambook2/ch3/visualizeGeometry/build/CMakeFiles/edit_cache.dir
+/Users/liuxing/files/cpp/slambook2/ch3/visualizeGeometry/build/CMakeFiles/visualizeGeometry.dir
