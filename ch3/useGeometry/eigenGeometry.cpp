@@ -16,7 +16,7 @@ int main(int argc, char** argv){
     Matrix3d rotation_matrix = Matrix3d::Identity();         // 此处的::符号是作为访问类的静态成员函数
     
     // 旋转向量使用AngelAxis，它底层不直接是Matrix，但运算可以当做矩阵（因为重载了运算符）
-    AngleAxisd rotation_vector(M_PI / 4, Vector3d(0, 0, 1))      //沿Z轴旋转45度，两个参数分别是旋转的角度和轴
+    AngleAxisd rotation_vector(M_PI / 4, Vector3d(0, 0, 1));      //沿Z轴旋转45度，两个参数分别是旋转的角度和轴
     cout.precision(3);
     cout<<"rotation matrix = \n"<<rotation_vector.matrix()<<endl;     //用成员函数matrix()转换成矩阵
 
@@ -33,8 +33,8 @@ int main(int argc, char** argv){
     cout << "(1,0,0) after rotation (by matrix) = " << v_rotated.transpose() << endl;
 
     // 方式3：用欧拉角实现。可以先将旋转矩阵转换成欧拉角
-    Vectored eular_angles = rotation_matrix.eularAngles(2, 1, 0)    // ZYX顺序，即yaw-pitch-roll顺序
-    cout<<"yaw-pithc-roll = "<<eular_angles.transpose()<<endl;
+    Vector3d euler_angles = rotation_matrix.eulerAngles(2, 1, 0);    // ZYX顺序，即yaw-pitch-roll顺序
+    cout<<"yaw-pithc-roll = "<<euler_angles.transpose()<<endl;
 
     // 方式4：欧式变换矩阵使用Eigen::Isometry
     Isometry3d T = Isometry3d::Identity();
