@@ -28,7 +28,8 @@ int main(int argc, char** argv){
     Matrix<float, 3, 1> vd_3d;
 
     //Matrxi3d实质上是Eigen::Matrix<double, 3, 3>
-    Matrix3d matrix_33 = Matrix3d::Zero();    //初始化为零
+    // 官方文档: typedef Matrix<double, 3, 3>  Eigen::Matrix3d
+    Matrix3d matrix_33 = Matrix3d::Zero();    //初始化为零,通过Matrix3d这个类的静态成员函数实现的
     //如果不确定矩阵大小，可以使用动态大小的矩阵
     Matrix<double, Dynamic, Dynamic> matrix_dynamic;
     // 更简单的：
