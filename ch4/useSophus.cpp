@@ -1,3 +1,6 @@
+// 注意：本版本和教材中不同，本版本使用的是模板类的Sophus库，不需要指定单双精度，代码和slambokk2中一致
+// 注意在安装Sophus库时make 和 make install的区别，前者只是编译，后者安装。
+
 #include<iostream>
 #include<cmath>
 #include<Eigen/Core>
@@ -17,9 +20,9 @@ int main(int argc, char** argv){
     Sophus::SO3d SO3_R(R);        // 由旋转矩阵构造李群（特殊正交群）；
     Sophus::SO3d SO3_q(q);        // 也可通过四元数构造李群；
     // 二者是等价的
-    cout<< "SO(3) from matrix: \n"<<SO3_R.Matrix()<<endl;
-    cout<< "SO(3) from quaternion: \n"<<SO3_q.Matrix()<<endl;
-    cout<<"They are equal."
+    cout<< "SO(3) from matrix: \n"<<SO3_R.matrix()<<endl;
+    cout<< "SO(3) from quaternion: \n"<<SO3_q.matrix()<<endl;
+    cout<<"They are equal."<<endl;
 
     // 使用对数映射获得它的李代数
     Vector3d so3 = SO3_R.log();
@@ -31,7 +34,7 @@ int main(int argc, char** argv){
 
     // 增量扰动模型的更新
     Vector3d update_so3(1e-4, 0, 0);         // 假设更新量为这么多
-    Sophus::SO3d SO3_updated = Sophus::SO3d::exp(update_so3) * SO3_R；
+    Sophus::SO3d SO3_updated = Sophus::SO3d::exp(update_so3) * SO3_R;
     cout<< "SO3 updated = \n"<< SO3_updated.matrix()<<endl;
 
     cout<<"****************************************"<<endl;
@@ -55,7 +58,7 @@ int main(int argc, char** argv){
     update_se3.setZero();
     update_se3(0, 0) = 1e-4d;      // 啥意思啊？？？
     Sophus::SE3d SE3_updated = Sophus::SE3d::exp(update_se3) * SE3_Rt;
-    cout<< " SE3 updated = "<<endl<<SE3.matrix()<<endl;
+    cout<< " SE3 updated = \n"<<SE3_updated.matrix()<<endl;
 
     return 0;
 }
