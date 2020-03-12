@@ -41,15 +41,15 @@ int main(int argc, char** argv){
         }
     }
     chrono::steady_clock::time_point t2 = chrono::steady_clock::now();
-    chroon::duration<double> time_used = chrono::duration_cast<chrono::duration<double>>(t2 -t1);
+    chrono::duration<double> time_used = chrono::duration_cast<chrono::duration<double>>(t2 -t1);
     cout<<"The traversal spend"<<time_used.count()<<"seconds."<<endl;
 
     // 关于cv::Mat的拷贝
     // 直接赋值并不会拷贝数据，浅层复制？？？
     cv::Mat image_another = image;
     // 修改image_another 会导致image发生变化
-    image_another(cv：：Rect(0, 0, 100, 100)).setTo(0); //将左上角块置零
-    cv::imwrite("image_another.jpg", image_another)
+    image_another(cv::Rect(0, 0, 100, 100)).setTo(0); //将左上角块置零
+    cv::imwrite("image_another.jpg", image_another);
 
     // 使用clone函数来拷贝数据，深层复制？？？
     cv::Mat image_clone = image.clone();
