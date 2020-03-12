@@ -1,9 +1,10 @@
 #include<string>
+#include<math.h>
 #include<opencv2/opencv.hpp>
 
 using namespace std;
 
-string image_file = "./distorted.png"      // 请确保路径正确
+string image_file = "../distorted.png";      // 请确保路径正确
 
 int main(int argc, char** argv){
     
@@ -24,7 +25,7 @@ int main(int argc, char** argv){
         for (int u = 0; u < cols; u++){
             // 按照公式，先把像素坐标还原成归一化平面坐标，然后去畸变，最后还原成像素坐标
             double x = (u - cx) / fx, y = (v - cy) / fy;
-            double r = sqrt(x * x, y * y);
+            double r = sqrt(x*x +  y*y);
             double x_distorted = x * (1 + k1 * r * r + k2 * r * r * r * r) + 2 * p1 * x * y + p2 * (r * r + 2 * x * x);
             double y_distorted = y * (1 + k1 * r * r + k2 * r * r * r * r) + p1 * (r * r + 2 * y * y) + 2 * p2 * x * y;
             double u_distorted = fx * x_distorted + cx;
