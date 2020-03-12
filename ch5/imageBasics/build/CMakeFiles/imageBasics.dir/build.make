@@ -57,38 +57,38 @@ include CMakeFiles/imageBasics.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/imageBasics.dir/flags.make
 
-CMakeFiles/imageBasics.dir/imageBasics.cpp.o: CMakeFiles/imageBasics.dir/flags.make
-CMakeFiles/imageBasics.dir/imageBasics.cpp.o: ../imageBasics.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/projects/slambook2/ch5/imageBasics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/imageBasics.dir/imageBasics.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/imageBasics.dir/imageBasics.cpp.o -c /root/projects/slambook2/ch5/imageBasics/imageBasics.cpp
+CMakeFiles/imageBasics.dir/imageBasics.o: CMakeFiles/imageBasics.dir/flags.make
+CMakeFiles/imageBasics.dir/imageBasics.o: ../imageBasics.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/projects/slambook2/ch5/imageBasics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/imageBasics.dir/imageBasics.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/imageBasics.dir/imageBasics.o -c /root/projects/slambook2/ch5/imageBasics/imageBasics.cpp
 
-CMakeFiles/imageBasics.dir/imageBasics.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imageBasics.dir/imageBasics.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/projects/slambook2/ch5/imageBasics/imageBasics.cpp > CMakeFiles/imageBasics.dir/imageBasics.cpp.i
+CMakeFiles/imageBasics.dir/imageBasics.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imageBasics.dir/imageBasics.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/projects/slambook2/ch5/imageBasics/imageBasics.cpp > CMakeFiles/imageBasics.dir/imageBasics.i
 
-CMakeFiles/imageBasics.dir/imageBasics.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imageBasics.dir/imageBasics.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/projects/slambook2/ch5/imageBasics/imageBasics.cpp -o CMakeFiles/imageBasics.dir/imageBasics.cpp.s
+CMakeFiles/imageBasics.dir/imageBasics.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imageBasics.dir/imageBasics.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/projects/slambook2/ch5/imageBasics/imageBasics.cpp -o CMakeFiles/imageBasics.dir/imageBasics.s
 
-CMakeFiles/imageBasics.dir/imageBasics.cpp.o.requires:
+CMakeFiles/imageBasics.dir/imageBasics.o.requires:
 
-.PHONY : CMakeFiles/imageBasics.dir/imageBasics.cpp.o.requires
+.PHONY : CMakeFiles/imageBasics.dir/imageBasics.o.requires
 
-CMakeFiles/imageBasics.dir/imageBasics.cpp.o.provides: CMakeFiles/imageBasics.dir/imageBasics.cpp.o.requires
-	$(MAKE) -f CMakeFiles/imageBasics.dir/build.make CMakeFiles/imageBasics.dir/imageBasics.cpp.o.provides.build
-.PHONY : CMakeFiles/imageBasics.dir/imageBasics.cpp.o.provides
+CMakeFiles/imageBasics.dir/imageBasics.o.provides: CMakeFiles/imageBasics.dir/imageBasics.o.requires
+	$(MAKE) -f CMakeFiles/imageBasics.dir/build.make CMakeFiles/imageBasics.dir/imageBasics.o.provides.build
+.PHONY : CMakeFiles/imageBasics.dir/imageBasics.o.provides
 
-CMakeFiles/imageBasics.dir/imageBasics.cpp.o.provides.build: CMakeFiles/imageBasics.dir/imageBasics.cpp.o
+CMakeFiles/imageBasics.dir/imageBasics.o.provides.build: CMakeFiles/imageBasics.dir/imageBasics.o
 
 
 # Object files for target imageBasics
 imageBasics_OBJECTS = \
-"CMakeFiles/imageBasics.dir/imageBasics.cpp.o"
+"CMakeFiles/imageBasics.dir/imageBasics.o"
 
 # External object files for target imageBasics
 imageBasics_EXTERNAL_OBJECTS =
 
-imageBasics: CMakeFiles/imageBasics.dir/imageBasics.cpp.o
+imageBasics: CMakeFiles/imageBasics.dir/imageBasics.o
 imageBasics: CMakeFiles/imageBasics.dir/build.make
 imageBasics: /usr/local/lib/libopencv_dnn.so.4.2.0
 imageBasics: /usr/local/lib/libopencv_gapi.so.4.2.0
@@ -114,7 +114,7 @@ CMakeFiles/imageBasics.dir/build: imageBasics
 
 .PHONY : CMakeFiles/imageBasics.dir/build
 
-CMakeFiles/imageBasics.dir/requires: CMakeFiles/imageBasics.dir/imageBasics.cpp.o.requires
+CMakeFiles/imageBasics.dir/requires: CMakeFiles/imageBasics.dir/imageBasics.o.requires
 
 .PHONY : CMakeFiles/imageBasics.dir/requires
 

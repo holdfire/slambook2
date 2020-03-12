@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/projects/slambook2/ch5/imageBasics/imageBasics.cpp" "/root/projects/slambook2/ch5/imageBasics/build/CMakeFiles/imageBasics.dir/imageBasics.cpp.o"
+  "/root/projects/slambook2/ch5/imageBasics/imageBasics.cpp" "/root/projects/slambook2/ch5/imageBasics/build/CMakeFiles/imageBasics.dir/imageBasics.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

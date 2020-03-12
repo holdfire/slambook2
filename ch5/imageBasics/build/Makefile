@@ -123,32 +123,20 @@ imageBasics/fast:
 	$(MAKE) -f CMakeFiles/imageBasics.dir/build.make CMakeFiles/imageBasics.dir/build
 .PHONY : imageBasics/fast
 
-imageBasics.o: imageBasics.cpp.o
-
+# target to build an object file
+imageBasics.o:
+	$(MAKE) -f CMakeFiles/imageBasics.dir/build.make CMakeFiles/imageBasics.dir/imageBasics.o
 .PHONY : imageBasics.o
 
-# target to build an object file
-imageBasics.cpp.o:
-	$(MAKE) -f CMakeFiles/imageBasics.dir/build.make CMakeFiles/imageBasics.dir/imageBasics.cpp.o
-.PHONY : imageBasics.cpp.o
-
-imageBasics.i: imageBasics.cpp.i
-
+# target to preprocess a source file
+imageBasics.i:
+	$(MAKE) -f CMakeFiles/imageBasics.dir/build.make CMakeFiles/imageBasics.dir/imageBasics.i
 .PHONY : imageBasics.i
 
-# target to preprocess a source file
-imageBasics.cpp.i:
-	$(MAKE) -f CMakeFiles/imageBasics.dir/build.make CMakeFiles/imageBasics.dir/imageBasics.cpp.i
-.PHONY : imageBasics.cpp.i
-
-imageBasics.s: imageBasics.cpp.s
-
-.PHONY : imageBasics.s
-
 # target to generate assembly for a file
-imageBasics.cpp.s:
-	$(MAKE) -f CMakeFiles/imageBasics.dir/build.make CMakeFiles/imageBasics.dir/imageBasics.cpp.s
-.PHONY : imageBasics.cpp.s
+imageBasics.s:
+	$(MAKE) -f CMakeFiles/imageBasics.dir/build.make CMakeFiles/imageBasics.dir/imageBasics.s
+.PHONY : imageBasics.s
 
 # Help Target
 help:

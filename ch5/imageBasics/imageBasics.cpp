@@ -5,7 +5,7 @@ using namespace std;
 #include<opencv2/core/core.hpp>
 #include<opencv2/highgui/highgui.hpp>
 
-int main(int argc, char** argv){
+int main(int argc, char **argv){
     // 读取argv[1] 指定的图像
     cv::Mat image;
     image = cv::imread(argv[1]);       
