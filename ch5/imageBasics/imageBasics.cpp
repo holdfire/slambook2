@@ -11,7 +11,7 @@ int main(int argc, char **argv){
     image = cv::imread(argv[1]);       
 
     // 判断图像文件是否读取正确
-    if (image.data != nullptr){
+    if (image.data == nullptr){
         cerr<<"文件"<<argv[1]<<"不存在"<<endl;
         return 0;
     }

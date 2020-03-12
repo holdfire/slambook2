@@ -1,3 +1,0 @@
-/root/projects/slambook2/ch5/imageBasics/build/CMakeFiles/rebuild_cache.dir
-/root/projects/slambook2/ch5/imageBasics/build/CMakeFiles/imageBasics.dir
-/root/projects/slambook2/ch5/imageBasics/build/CMakeFiles/edit_cache.dir
